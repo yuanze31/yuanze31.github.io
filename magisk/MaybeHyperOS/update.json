@@ -1,6 +1,6 @@
 {
-    "version": "v1.1",
-    "versionCode": 2,
+    "version": "v1.0",
+    "versionCode": 1,
     "zipUrl": "https://github.com/yuanze31/MaybeHyperOS/releases/download/v1.0/MaybeHyperOS.zip",
     "changelog": "https://yuanze31.github.io/magisk/MaybeHyperOS/changelog.md"
 }
