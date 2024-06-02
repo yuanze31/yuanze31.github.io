@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>斯普拉顿3武器技能搭配</title>
+    <style>
+      .tab-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        border-bottom: none;
+      }
+      .tab {
+        position: relative; /* 为伪元素定位做准备 */
+        padding: 10px; /* 按钮内边距 */
+        display: inline-block;
+        padding: 10px;
+        margin-right: 5px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+      }
+      .tab.active {
+        background-color: #f1f1f1;
+      }
+      .tab.active::after {
+        content: ""; /* 伪元素需要content属性 */
+        display: block; /* 使伪元素以块级元素显示 */
+        margin: auto; /* 水平居中 */
+        height: 3px; /* 黄线的高度 */
+        width: calc(100% - 20px); /* 减去左右padding的宽度 */
+        background-color: blue; /* 黄色背景 */
+        position: absolute; /* 绝对定位 */
+        bottom: 0; /* 将黄线定位到按钮底部 */
+        left: 10px; /* 与按钮左边距对齐 */
+      }
+
+      .tab-content {
+        display: none; /* 默认设置为不显示 */
+        padding: 20px;
+        border: none;
+        margin-top: -1px;
+      }
+      .tab-content.active {
+        display: block; /* 当Tab激活时显示 */
+      }
+
+      /* 默认背景，适用于宽屏设备（电脑） */
+      body {
+        background-image: url("bg2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
+
+      /* 当屏幕宽度小于或等于600px时，适用于窄屏设备（手机） */
+      @media (max-width: 600px) {
+        body {
+          background-image: url("bg1.png");
+          background-position: center;
+        }
+      }
+      body::before {
+        content: ""; /* 伪元素需要content属性 */
+        position: fixed; /* 固定定位，覆盖整个视口 */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.3); /* 半透明白色蒙版 */
+        z-index: -1; /* 将蒙版置于背景图片之上，内容之下 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab-container">
+      <!-- 添加11个Tab -->
+      <div class="tab active" onclick="openTab(event, 'Tab0')">概要</div>
+      <div class="tab" onclick="openTab(event, 'Tab1')">射击枪</div>
+      <div class="tab" onclick="openTab(event, 'Tab2')">滚筒</div>
+      <div class="tab" onclick="openTab(event, 'Tab3')">蓄力狙击枪</div>
+      <div class="tab" onclick="openTab(event, 'Tab4')">泼桶</div>
+      <div class="tab" onclick="openTab(event, 'Tab5')">旋转枪</div>
+      <div class="tab" onclick="openTab(event, 'Tab6')">机动枪</div>
+      <div class="tab" onclick="openTab(event, 'Tab7')">防空伞</div>
+      <div class="tab" onclick="openTab(event, 'Tab8')">爆破枪</div>
+      <div class="tab" onclick="openTab(event, 'Tab9')">画笔</div>
+      <div class="tab" onclick="openTab(event, 'Tab10')">猎鱼弓</div>
+      <div class="tab" onclick="openTab(event, 'Tab11')">刮水刀</div>
+    </div>
+
+    <!-- 添加11个Tab对应的内容区域 -->
+    <div id="Tab0" class="tab-content active">
+      <h3>斯普拉顿3武器技能搭配</h3>
+      <p>一个用于收集斯普拉顿3武器技能搭配的网站</p>
+      <p>点击武器名即可查看</p>
+      <p>装备来源于网络，保留了原作者信息</p>
+      <p>
+        我的<a href="https://github.com/yuanze31" target="_blank">Github主页</a>
+      </p>
+    </div>
+    <div id="Tab1" class="tab-content">
+      <h3>射击枪</h3>
+      <p>
+        <a href="./equipments/01射击枪/52加仑.png" target="_blank">52加仑</a>
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/96加仑 装饰.png" target="_blank"
+          >96加仑 装饰</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/96加仑.png" target="_blank">96加仑</a>
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/H3卷管枪.png" target="_blank"
+          >H3卷管枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/L3卷管枪.png" target="_blank"
+          >L3卷管枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/N-ZAP85.png" target="_blank">N-ZAP85</a>
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/N-ZAP89.png" target="_blank">N-ZAP89</a>
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/顶尖射击枪 联名.png" target="_blank"
+          >顶尖射击枪 联名</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/顶尖射击枪.png" target="_blank"
+          >顶尖射击枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/枫叶射击枪.png" target="_blank"
+          >枫叶射击枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/广域标记枪 新型.png" target="_blank"
+          >广域标记枪 新型</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/广域标记枪.png" target="_blank"
+          >广域标记枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/开瓶喷泉枪.png" target="_blank"
+          >开瓶喷泉枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/喷射清洁枪 改装.png" target="_blank"
+          >喷射清洁枪 改装</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/喷射清洁枪.png" target="_blank"
+          >喷射清洁枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/斯普拉射击枪 联名.png" target="_blank"
+          >斯普拉射击枪 联名</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/斯普拉射击枪.png" target="_blank"
+          >斯普拉射击枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/太空射击枪.png" target="_blank"
+          >太空射击枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/新叶射击枪.png" target="_blank"
+          >新叶射击枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/窄域标记枪 新型.png" target="_blank"
+          >窄域标记枪 新型</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/窄域标记枪.png" target="_blank"
+          >窄域标记枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/01射击枪/专业模型枪MG.png" target="_blank"
+          >专业模型枪MG</a
+        >
+      </p>
+    </div>
+    <div id="Tab2" class="tab-content">
+      <h3>滚筒</h3>
+      <p>
+        <a href="./equipments/02滚筒/电动马达滚筒.png" target="_blank"
+          >电动马达滚筒</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/02滚筒/可变式滚筒.png" target="_blank"
+          >可变式滚筒</a
+        >
+      </p>
+      <p><a href="./equipments/02滚筒/宽滚筒.png" target="_blank">宽滚筒</a></p>
+      <p>
+        <a href="./equipments/02滚筒/斯普拉滚筒 联名.png" target="_blank"
+          >斯普拉滚筒 联名</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/02滚筒/斯普拉滚筒.png" target="_blank"
+          >斯普拉滚筒</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/02滚筒/碳纤维滚筒 装饰.png" target="_blank"
+          >碳纤维滚筒 装饰</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/02滚筒/碳纤维滚筒.png" target="_blank"
+          >碳纤维滚筒</a
+        >
+      </p>
+    </div>
+    <div id="Tab3" class="tab-content">
+      <h3>蓄力狙击枪</h3>
+      <p>
+        <a href="./equipments/03蓄力狙击枪/14式竹筒枪 甲.png" target="_blank"
+          >14式竹筒枪 甲</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/03蓄力狙击枪/4K准星枪.png" target="_blank"
+          >4K准星枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/03蓄力狙击枪/R-PEN.5H.png" target="_blank"
+          >R-PEN</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/03蓄力狙击枪/高压油管枪.png" target="_blank"
+          >高压油管枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/03蓄力狙击枪/公升4K.png" target="_blank"
+          >公升4K</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/03蓄力狙击枪/鱿快洁α.png" target="_blank"
+          >鱿快洁α</a
+        >
+      </p>
+    </div>
+    <div id="Tab4" class="tab-content">
+      <h3>泼桶</h3>
+      <p>
+        <a href="./equipments/04泼桶/爆炸泼桶.png" target="_blank">爆炸泼桶</a>
+      </p>
+      <p>
+        <a href="./equipments/04泼桶/飞溅泼桶 装饰.png" target="_blank"
+          >飞溅泼桶 装饰</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/04泼桶/飞溅泼桶.png" target="_blank">飞溅泼桶</a>
+      </p>
+      <p>
+        <a href="./equipments/04泼桶/回旋泼桶.png" target="_blank">回旋泼桶</a>
+      </p>
+      <p>
+        <a href="./equipments/04泼桶/满溢泡澡泼桶.png" target="_blank"
+          >满溢泡澡泼桶</a
+        >
+      </p>
+      <p><a href="./equipments/04泼桶/洗笔桶.png" target="_blank">洗笔桶</a></p>
+      <p>
+        <a href="./equipments/04泼桶/洗笔筒 新艺术.png" target="_blank"
+          >洗笔筒 新艺术</a
+        >
+      </p>
+    </div>
+    <div id="Tab5" class="tab-content">
+      <h3>旋转枪</h3>
+      <p>
+        <a href="./equipments/05旋转枪/斯普拉旋转枪 联名.png" target="_blank"
+          >斯普拉旋转枪 联名</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/05旋转枪/斯普拉旋转枪.png" target="_blank"
+          >斯普拉旋转枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/05旋转枪/桶装旋转枪.png" target="_blank"
+          >桶装旋转枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/05旋转枪/消防栓旋转枪.png" target="_blank"
+          >消防栓旋转枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/05旋转枪/鹦鹉螺号47.png" target="_blank"
+          >鹦鹉螺号47</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/05旋转枪/圆珠笔.png" target="_blank">圆珠笔</a>
+      </p>
+    </div>
+    <div id="Tab6" class="tab-content">
+      <h3>机动枪</h3>
+      <p>
+        <a href="./equipments/06机动枪/溅镀枪 新艺术.png" target="_blank"
+          >溅镀枪 新艺术</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/06机动枪/溅镀枪.png" target="_blank">溅镀枪</a>
+      </p>
+      <p>
+        <a href="./equipments/06机动枪/开尔文525.png" target="_blank"
+          >开尔文525</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/06机动枪/双重清洁枪.png" target="_blank"
+          >双重清洁枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/06机动枪/斯普拉机动枪.png" target="_blank"
+          >斯普拉机动枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/06机动枪/斯普拉准星枪 联名.png" target="_blank"
+          >斯普拉准星枪 联名</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/06机动枪/斯普拉准星枪.png" target="_blank"
+          >斯普拉准星枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/06机动枪/四重弹跳手枪 黑.png" target="_blank"
+          >四重弹跳手枪 黑</a
+        >
+      </p>
+    </div>
+    <div id="Tab7" class="tab-content">
+      <h3>防空伞</h3>
+      <p>
+        <a href="./equipments/07防空伞/露营防空伞.png" target="_blank"
+          >露营防空伞</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/07防空伞/特工配件.png" target="_blank"
+          >特工配件</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/07防空伞/遮阳防空伞.png" target="_blank"
+          >遮阳防空伞</a
+        >
+      </p>
+    </div>
+    <div id="Tab8" class="tab-content">
+      <h3>爆破枪</h3>
+      <p>
+        <a href="./equipments/08爆破枪/冲涂爆破枪 新型.png" target="_blank"
+          >冲涂爆破枪 新型</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/08爆破枪/冲涂爆破枪.png" target="_blank"
+          >冲涂爆破枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/08爆破枪/火热爆破枪.png" target="_blank"
+          >火热爆破枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/08爆破枪/快速爆破枪 精英.png" target="_blank"
+          >快速爆破枪 精英</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/08爆破枪/快速爆破枪 装饰.png" target="_blank"
+          >快速爆破枪 装饰</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/08爆破枪/快速爆破枪.png" target="_blank"
+          >快速爆破枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/08爆破枪/新星爆破枪 新型.png" target="_blank"
+          >新星爆破枪 新型</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/08爆破枪/新星爆破枪.png" target="_blank"
+          >新星爆破枪</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/08爆破枪/远距爆破枪.png" target="_blank"
+          >远距爆破枪</a
+        >
+      </p>
+    </div>
+    <div id="Tab9" class="tab-content">
+      <h3>画笔</h3>
+      <p>
+        <a href="./equipments/09画笔/巴勃罗 新艺术.png" target="_blank"
+          >巴勃罗 新艺术</a
+        >
+      </p>
+      <p><a href="./equipments/09画笔/巴勃罗.png" target="_blank">巴勃罗</a></p>
+      <p><a href="./equipments/09画笔/北斋.png" target="_blank">北斋</a></p>
+    </div>
+    <div id="Tab10" class="tab-content">
+      <h3>猎鱼弓</h3>
+      <p>
+        <a href="./equipments/10猎鱼弓/LACT-450.png" target="_blank"
+          >LACT-450</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/10猎鱼弓/三发猎鱼弓.png" target="_blank"
+          >三发猎鱼弓</a
+        >
+      </p>
+    </div>
+    <div id="Tab11" class="tab-content">
+      <h3>刮水刀</h3>
+      <p>
+        <a href="./equipments/11刮水刀/工作刮水刀.png" target="_blank"
+          >工作刮水刀</a
+        >
+      </p>
+      <p>
+        <a href="./equipments/11刮水刀/雨刷刮水刀.png" target="_blank"
+          >雨刷刮水刀</a
+        >
+      </p>
+    </div>
+
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>
